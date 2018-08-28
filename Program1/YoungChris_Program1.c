@@ -43,6 +43,9 @@ int C(int x,int y){
 	printf("&u=%8x &v=%8x &w=%8x,&i=%8x,&p=%8x\n",&u,&v,&w,&i,p);
 	u=10;v=11;w=12;i=13;
 	FP = (int *)getebp();
+	while(&FP != 0){
+		printf("&FP = %8x     *FP = %8x\n",&FP,*FP);
+		FP = (int*)*FP;
 	p = (int *)&p;
 	for (int i = 0; i < 128;i++){
 		printf("&p=%8x\n", p);
