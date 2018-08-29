@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-int *F;
+int *FP;
 
 int main(int argc,char *argv[],char *env[])
 {
@@ -43,4 +42,12 @@ int C(int x,int y){
 	printf("C starting...\n");
 	printf("&u=%8x &v=%8x &w=%8x,&i=%8x,&p=%8x\n",&u,&v,&w,&i,p);
 	u=10;v=11;w=12;i=13;
+	FP = (int *)getebp();
+	p = (int *)&p;
+	for (int i = 0; i < 128;i++){
+		printf("&p=%8x\n", p);
+		p++;
+	}
+		
+
 }
