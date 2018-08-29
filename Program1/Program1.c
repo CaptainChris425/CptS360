@@ -112,7 +112,7 @@ int printu(u32 x)
    putchar(' ');
 }
 
-2-2. Write YOUR ONW fucntions 
+2-2. Write YOUR OWN fucntions 
 
  int  printd(int x) which prints an integer (x may be negative!!!)
  int  printx(u32 x) which prints x in HEX   (start with 0x )
